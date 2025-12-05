@@ -1,5 +1,8 @@
 {
   "name": "byos_node_lite",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "tsx --env-file=.env.local src/Main.ts",
     "watch": "tsx watch --env-file=.env.local src/Main.ts",
