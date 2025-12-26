@@ -1,5 +1,8 @@
 {
   "name": "byos_node_lite",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "tsx --env-file=.env.local src/Main.ts",
     "watch": "tsx watch --env-file=.env.local src/Main.ts",
@@ -11,8 +14,8 @@
     "jimp": "^1.6.0",
     "liquidjs": "^10.21.1",
     "puppeteer": "^24.9.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2",
     "tsx": "^4.19.4"
   },
   "devDependencies": {
