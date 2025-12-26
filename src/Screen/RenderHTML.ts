@@ -29,8 +29,8 @@ export async function initPuppeteer() {
     page = await browser.newPage();
     await page.setViewport({ width: 800, height: 480 });
     await page.setRequestInterception(true);
-    page.on('pageerror', ({ message }) => console.error('error:', message));
-    page.on('requestfailed', request => console.log(`Failed: ${request.failure()?.errorText} ${request.url()}`));
+    page.on('pageerror', (error: any) => console.error('Puppeteer error:', error.message));
+    page.on('requestfailed', request => console.log(`Puppeteer failed: ${request.failure()?.errorText} ${request.url()}`));
     // page.on('console', message => console.log('console: ', message.text()));
     page.on('request', async (interceptedRequest) => {
         if (interceptedRequest.isInterceptResolutionHandled()) {
